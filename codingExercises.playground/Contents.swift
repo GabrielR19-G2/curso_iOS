@@ -160,4 +160,22 @@ func getSemester(_ month: Int) {
 
 getTrimester(12)
 
-// 
+// MARK: EJERCICIOS
+
+/** Ejercicio 4
+  Calcula el area de un circulo:
+  Crea una función que reciba el radio de un círculo y devuelva su área (PI * Radio * Radio)
+  Luego pinta el resultado por pantalla
+ */
+
+func areaCirculo(radio: Double){
+    print("Area: \(Double.pi * radio * radio)")
+}
+func calculateCircleArea(_ radius: Double) -> Double{
+    return Double.pi * radius * radius
+}
+
+areaCirculo(radio: 12)
+let radius:Double = 20
+let result = calculateCircleArea(radius)
+print("Area de un circulo con radio de \(radius): \(result)")
