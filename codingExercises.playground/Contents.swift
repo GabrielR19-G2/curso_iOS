@@ -133,3 +133,31 @@ func getMonth(month: Int) {
 }
 
 getMonth(month: 8)
+
+// MARK: SWITCH
+func getTrimester(_ month: Int) {
+    switch month {
+    case 1, 2, 3:
+        print("Primer trimestre")
+    case 4, 5, 6:
+        print("Segundo trimestre")
+    case 7, 8, 9: print("Tercero trimestre")
+    case 10, 11, 12: print("Cuarto trimestre")
+    default:
+        print("Introduce un mes válido")
+    }
+}
+getTrimester(2)
+
+func getSemester(_ month: Int) {
+    switch month {
+    case 1, 2, 3, 4, 5, 6: print("Primer trimestre")
+    case 7...12: print("Tercer trimestre")
+    default: print("Introduce un mes válido")
+    }
+}
+
+
+getTrimester(12)
+
+// 
