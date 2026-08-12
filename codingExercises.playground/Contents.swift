@@ -72,11 +72,64 @@ func calculate2(_ a: Int, _ b: Int) {
     print("Resultado es: \(a + b)")
 }
 
-
 calculate2(10, 20)
 // -> tipo de valor que tiene que retornar
-func calculate3(a: Int, b:Int) -> Int {
+func calculate3(a: Int, b: Int) -> Int {
     let result = a + b
     print("resultado: \(result)")
     return result
 }
+
+// MARK: IF - ELSE
+let userAge = 23
+
+if userAge >= 18 {
+    print("Eres mayor de edad")
+} else {
+    print("Eres menor de edad")
+}
+
+func greeting(_ hour: Int) {
+    if hour < 12 {
+        print("Buenos dias")
+    } else if hour < 18 {
+        print("Buenas tardes")
+    } else {
+        print("Buenas noches")
+    }
+}
+
+greeting(16)
+
+func getMonth(month: Int) {
+    switch month {
+    case 1:
+        print("Enero")
+    case 2:
+        print("Febrero")
+    case 3:
+        print("Marzo")
+    case 4:
+        print("Abril")
+    case 5:
+        print("Mayo")
+    case 6:
+        print("Junio")
+    case 7:
+        print("Julio")
+    case 8:
+        print("Agosto")
+    case 9:
+        print("Septiembre")
+    case 10:
+        print("Octubre")
+    case 11:
+        print("Noviembre")
+    case 12:
+        print("Diciembre")
+    default:
+        print("Ingresa un numero valido")
+    }
+}
+
+getMonth(month: 8)
