@@ -239,3 +239,18 @@ for day in daysOfWeek2 {
         print("esta el jueves en el listado")
     }
 }
+
+
+var count = 0
+while count < 10 {
+    print("Contador: \(count)")
+    count += 1
+}
+
+
+var count2 = 5
+
+// Se va a cumplir minimo 1 vez. Ejecuta y despues valida.
+repeat {
+    print("Pepe")
+} while count2 < 0
