@@ -157,7 +157,6 @@ func getSemester(_ month: Int) {
     }
 }
 
-
 getTrimester(12)
 
 // MARK: EJERCICIOS
@@ -168,18 +167,75 @@ getTrimester(12)
   Luego pinta el resultado por pantalla
  */
 
-func areaCirculo(radio: Double){
+func areaCirculo(radio: Double) {
     print("Area: \(Double.pi * radio * radio)")
 }
-func calculateCircleArea(_ radius: Double) -> Double{
+func calculateCircleArea(_ radius: Double) -> Double {
     return Double.pi * radius * radius
 }
 
 areaCirculo(radio: 12)
-let radius:Double = 20
+let radius: Double = 20
 let result = calculateCircleArea(radius)
 print("Area de un circulo con radio de \(radius): \(result)")
 
+/// Ejercicio 5
+/// Crear una funcion que reciba un numero y con la ayuda de un IF pinte en lpantalla si el numero es positivo, negativo o cero
+func positiveOrNegative(number: Int) {
+    if number > 0 {
+        print("el numero es positivo: \(number)")
+    } else if number < 0 {
 
-/**
- */
+        print("El numero es negativo \(number)")
+    } else {
+        print("El numero es cero")
+    }
+}
+
+positiveOrNegative(number: -1)
+
+/// Ejercicio 6
+/// Crear una funcion que reciba un numero y con la ayuda de un SWITCH  pinte en lpantalla si el numero es positivo, negativo o cero
+
+func positiveOrNegativeSwitch(_ number: Int) {
+    switch number {
+    //    case  number > 0:
+    //        print("das")
+    case let x where number > 0:
+        print("numero positivo")
+    case let x where number < 0:
+        print("numero negativo")
+    default:
+        print("El numero es cero")
+    }
+}
+
+// Arrays
+let names: [String] = ["Gabriel", "Arturo", "Juan", "Ana"]
+print(names[3])
+
+var daysOfWeek: [String] = [
+    "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo",
+]
+
+print(daysOfWeek[3])
+daysOfWeek[3] = "Juernes"
+print(daysOfWeek[3])
+
+print(daysOfWeek[0])
+daysOfWeek.remove(at: 0)
+print(daysOfWeek[0])
+
+daysOfWeek.append("Gabriel")
+
+// Bucles
+var daysOfWeek2: [String] = [
+    "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo",
+]
+
+// en que posicion esta "jueves"
+for day in daysOfWeek2 {
+    if day == "Jueves" {
+        print("esta el jueves en el listado")
+    }
+}
