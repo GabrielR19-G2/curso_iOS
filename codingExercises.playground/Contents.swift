@@ -358,26 +358,70 @@ func ejemploNil(_ text: String) {
 
 ejemploNil(stringReal)
 ejemploNil(stringNil ?? "valorDefault")
-ejemploNil(stringNil!)
+//ejemploNil(stringNil!)
 
 // pasando valores opcionales
 func ejemploNil2(_ text: String?) {
     //        comprobando que la variable no sea nil/opcional
-//    cuando queremos hacer una opcion u otra
+    //    cuando queremos hacer una opcion u otra
     if let example = text {
         print(example)
     } else {
         print("Introduce un nombre para continuar")
     }
-//    el codigo va a avanzar pero si el text es nulo, no va a continuar, sale de la funcion
-//   Cuando no queremos continuar si no hay valor
+    //    el codigo va a avanzar pero si el text es nulo, no va a continuar, sale de la funcion
+    //   Cuando no queremos continuar si no hay valor
     guard let example2 = text else {
         print("no hay valor")
         return
     }
     print(example2)
-    
+
 }
 
 ejemploNil2(stringNil)
 ejemploNil2(stringReal)
+
+//MARK:  clases y structs
+// clases -> Molde, mandandole atributos conseguirmos construir diferentes cosas
+// contienen las funciones
+
+class Person {
+    var name: String
+    var age: Int
+
+    // constructor -> cuando le pasamos los valores, los va a crear. principio POO
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    func greetings(){
+        print("Hola, soy \(name) y tengo \(age) años")
+    }
+    
+    // cuando necesitamos un objeto de tipo persona, lo instanciamos con el constructor
+}
+
+// instanciamos la clase Person con los ()
+// instanciar -> Crear referencia
+var Gabriel:Person = Person(name: "Gabriel", age: 24)
+
+print(Gabriel.greetings())
+
+// MARK: Structs
+/**
+ Structs -> forma de almacenar informacion
+ modelo de datos, mas poderoso que tuples
+ 
+ Otro tipo de clases.
+ */
+struct ExampleStruct{
+    var name: String
+    var age: Int
+    
+    // no pasamos valores, eso se hace cuando lo instanciamos
+
+}
+
+var exampleStruct:ExampleStruct = ExampleStruct(name: "Gabriel", age: 24)
