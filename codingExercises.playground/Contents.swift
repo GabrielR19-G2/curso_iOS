@@ -240,13 +240,11 @@ for day in daysOfWeek2 {
     }
 }
 
-
 var count = 0
 while count < 10 {
     print("Contador: \(count)")
     count += 1
 }
-
 
 var count2 = 5
 
@@ -255,14 +253,75 @@ repeat {
     print("Pepe")
 } while count2 < 0
 
-
 for day in daysOfWeek2 {
     print("-----------------")
     if day == "Jueves" {
         print("esta el jueves en el listado")
         continue
-//        continue -> Terminar con la vuelta actual y continuar con la siguiente
-        
+        //        continue -> Terminar con la vuelta actual y continuar con la siguiente
+
     }
     print("XXXXXXXXXXXXXXXXX")
 }
+
+/// Ejercicio 7
+/// Escribe una función que reciba un número e imprima su tabla de multiplicar del 1 al 10
+func multiplication(_ number: Int) {
+    for i in 1...10 {
+        print("\(number) * \(i) = \(number * i)")
+    }
+}
+
+multiplication(5)
+
+/**
+ Ejercicio 8
+ Escribe un programa que calcule la suma de todos lo números pares del 1 al 100 y muestre el resultado.
+ Para sabre si un numero es par se tiene que dar la siguiente condición (num % 2 == 0)
+ */
+
+func par() {
+    var totalSum = 0
+    for number in 1...100 {
+        if number % 2 == 0 {
+            totalSum += number
+            print("Total: \(totalSum)")
+        }
+    }
+}
+
+par()
+
+func totalSum2() {
+    var totalSum = 0
+    for number in 1...100 {
+        if number % 2 != 0 {
+            continue
+        }
+        totalSum += number
+
+    }
+    print("El resultado2 es: \(totalSum)")
+}
+
+totalSum2()
+
+/// Ejercicio 9
+/// Escribe una funcion que cuente el numero de vocales en una palabra y lo pinte.
+/// Tip: Las palabras (Strings) pueden recorrerse con bucle for
+func vocalCounter(_ word: String) {
+    var vocals: Int = 0
+    //    enum VocalOptions: Character{
+    //       a, e, i, o, u
+    //    }
+    for char in word.lowercased() {
+        switch char {
+        case "a", "e", "i", "o", "u":
+            vocals += 1
+        default: continue  // continue porque queremos que siga dando vueltas.
+        }
+    }
+    print("total Vocals: \(vocals) in \(word)")
+
+}
+vocalCounter("Gabriel")
