@@ -254,3 +254,15 @@ var count2 = 5
 repeat {
     print("Pepe")
 } while count2 < 0
+
+
+for day in daysOfWeek2 {
+    print("-----------------")
+    if day == "Jueves" {
+        print("esta el jueves en el listado")
+        continue
+//        continue -> Terminar con la vuelta actual y continuar con la siguiente
+        
+    }
+    print("XXXXXXXXXXXXXXXXX")
+}
