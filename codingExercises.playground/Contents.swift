@@ -325,3 +325,59 @@ func vocalCounter(_ word: String) {
 
 }
 vocalCounter("Gabriel")
+
+// TUPLA
+// variable que puede tragar un monton de cosas
+//menos potente del array, acepta cualquier tipo de variable
+// para pasar info a las vistas
+var tupla = ("Gabriel", 24, true, "casa", 123465, 1.68)
+
+tupla.4
+
+// Diccionarios
+// clave valor
+var dicc: [String: Any] = [
+    "name": "Gabriel", "age": 24, "isHAppy": true, "address": "casa",
+    "number": 1_234_456, "height": 1.68,
+]
+
+var myDictionaryName: String = dicc["name"] as? String ?? "Gabriel"
+print(myDictionaryName)
+
+for (key, value) in dicc {
+    print("valor: \(key) palabra: \(value)")
+}
+
+// Nullabilidad
+var stringReal = "String"
+var stringNil: String? = nil
+
+func ejemploNil(_ text: String) {
+    //
+}
+
+ejemploNil(stringReal)
+ejemploNil(stringNil ?? "valorDefault")
+ejemploNil(stringNil!)
+
+// pasando valores opcionales
+func ejemploNil2(_ text: String?) {
+    //        comprobando que la variable no sea nil/opcional
+//    cuando queremos hacer una opcion u otra
+    if let example = text {
+        print(example)
+    } else {
+        print("Introduce un nombre para continuar")
+    }
+//    el codigo va a avanzar pero si el text es nulo, no va a continuar, sale de la funcion
+//   Cuando no queremos continuar si no hay valor
+    guard let example2 = text else {
+        print("no hay valor")
+        return
+    }
+    print(example2)
+    
+}
+
+ejemploNil2(stringNil)
+ejemploNil2(stringReal)
